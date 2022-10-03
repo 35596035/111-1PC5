@@ -33,10 +33,15 @@ namespace _111_1PC5
         {
             int i_MaxMoney = 0;
             int i_MaxSum = 0;
-            for (int i_Row = 0; i_Row < ia_2DArr.GetLength(0); i_Row++)
+            for (int i_Row = 0; i_Row < ia_2DArr.GetLength(0);i_Row++)
+            //GetLength(0)取裡面的第一層長度:3
+            //GetLength(1)取裡面的第二層長度:3
             {
+                //3Col
                 int i_Sum = 0;
-                int i_TmpMoney = 0
+                int i_TmpMoney = 0;
+                //int a = ia_2DArr.GetLength(0);
+                //Response.Write(a + "<br />");
                 for (int i_Col = 0; i_Col < ia_2DArr.GetLength(1);i_Col++)
                 {
                     i_Sum += ia_2DArr[i_Row,i_Col];
@@ -45,11 +50,12 @@ namespace _111_1PC5
                 if(i_TmpMoney > i_MaxMoney) {
                     i_MaxSum = i_Sum;
                 }
-                return i_MaxSum;
+                
+                //3 Row
+
+                //2 incline
             }
+            return i_MaxSum;
         }
-
-
-
     }
 }
