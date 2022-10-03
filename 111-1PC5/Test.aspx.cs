@@ -27,6 +27,7 @@ namespace _111_1PC5
             };
 
             mt_GetMost(ia_2DArr, ia_Money);
+            Response.Write(mt_GetMost(ia_2DArr, ia_Money));
         }
 
         int mt_GetMost(int[,] ia_2DArr, int[] ia_Money)
@@ -46,6 +47,8 @@ namespace _111_1PC5
                 {
                     i_Sum += ia_2DArr[i_Row,i_Col];
                 }
+                int a = i_Sum;
+                Response.Write(a);
                 i_TmpMoney = ia_Money[(i_Sum - 6)];
                 if(i_TmpMoney > i_MaxMoney) {
                     i_MaxSum = i_Sum;
