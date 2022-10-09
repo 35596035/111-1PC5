@@ -25,18 +25,7 @@ namespace _111_1PC5
                 { 1, 4, 3},
                 { 2, 5, 6},
             };
-            /*
-            int[,] ia_3DArr = new int[8, 3]
-            {
-                { 0, 1, 2},
-                { 3, 4, 5},
-                { 6, 7, 8},
-                { 0, 3, 6},
-                { 1, 4, 7},
-                { 2, 5, 8},
-                { 0, 4, 8},
-                { 2, 4, 6}
-            };*/
+
             //mt_GetMost(ia_2DArr, ia_Money);
             Response.Write("可獲得最多錢的和為:"+mt_GetMost(ia_2DArr, ia_Money)+"<br />");
             Response.Write("可獲得最少錢的和為:"+mt_GetLeast(ia_2DArr, ia_Money));
@@ -46,18 +35,14 @@ namespace _111_1PC5
             int i_MaxMoney = 0;
             int i_MaxSum = 0;
             for (int i_Row = 0; i_Row < ia_2DArr.GetLength(0); i_Row++)
-            //GetLength(0)取裡面的第一層長度:3
-            //GetLength(1)取裡面的第二層長度:3
             {
                 //V 3 Col
                 int i_Sum = 0;
                 int i_TmpMoney = 0;
-                
                 for (int i_Col = 0; i_Col < ia_2DArr.GetLength(1);i_Col++)
                 {
                     i_Sum += ia_2DArr[i_Row,i_Col];
                 }
-
                 i_TmpMoney = ia_Money[(i_Sum - 6)];
                 if (i_TmpMoney > i_MaxMoney) {
                     i_MaxSum = i_Sum;
@@ -99,13 +84,10 @@ namespace _111_1PC5
             int i_MinMoney = 0;
             int i_MinSum = 0;
             for (int i_Row = 0; i_Row < ia_2DArr.GetLength(0); i_Row++)
-            //GetLength(0)取裡面的第一層長度:3
-            //GetLength(1)取裡面的第二層長度:3
             {
                 //V 3 Col
                 int i_Sum = 0;
                 int i_TmpMoney = 0;
-
                 for (int i_Col = 0; i_Col < ia_2DArr.GetLength(1); i_Col++)
                 {
                     i_Sum += ia_2DArr[i_Row, i_Col];
